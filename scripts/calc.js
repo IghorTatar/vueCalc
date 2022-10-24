@@ -7,11 +7,15 @@ const app = new Vue({
   },
   computed: {
     display() {
-      return String(this.firstArgument);
+      //return String(this.firstArgument);
+      return;
     },
     secondaryDisplay() {
-      if (this.secondArgument === null) return ' ';
-      return `${this.secondArgument} ${this.operation}`;
+      if (this.secondArgument === null) {
+        if (this.operation === null) return this.firstArgument;
+      return `${this.firstArgument} ${this.operation}`;
+      }
+      return `${this.secondArgument} ${this.operation} ${this.firstArgument}`;
     }
   },
   methods: {
@@ -35,16 +39,24 @@ const app = new Vue({
       if (this.secondArgument === null) return;
       switch(this.operation) {
         case '+':
-          this.firstArgument = this.firstArgument + this.secondArgument;
+          this.firstArgument += this.secondArgument;
           break;
         case '-':
-          /* TO BE DONE */
+          this.firstArgument = this.secondArgument - this.firstArgument;
           break;
         case '*':
-          /* TO BE DONE */
+          this.firstArgument *= this.secondArgument;
           break;
         case '/':
-          /* TO BE DONE */
+          this.firstArgument = this.secondArgument / this.firstArgument;
+          break;
+        case '+/-':
+          this.firstArgument = this.secondArgument;
+          this.firstArgument *= -1;
+          break;
+        case '.':
+          this.firstArgument = this.secondArgument;
+          this.firstArgument /= 10;
           break;
       }
       this.secondArgument = null;
