@@ -12,29 +12,33 @@
       <div class="button-row">
         <button v-on:click="() => clearDisplay()">C</button>
         <button v-on:click="() => calculate()">=</button>
+        <!-- <div class="solar-panel"></div>
+        <div class="solar-panel"></div>
+        <div class="solar-panel"></div>
+        <div class="solar-panel"></div> -->
       </div>
       <div class="button-row">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>&divide;</button>
+        <button v-on:click="() => onPressedDigit(7)">7</button>
+        <button v-on:click="() => onPressedDigit(8)">8</button>
+        <button v-on:click="() => onPressedDigit(9)">9</button>
+        <button v-on:click="() => onPressedOperation('/')">&divide;</button>
       </div>
       <div class="button-row">
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>&times;</button>
+        <button v-on:click="() => onPressedDigit(4)">4</button>
+        <button v-on:click="() => onPressedDigit(5)">5</button>
+        <button v-on:click="() => onPressedDigit(6)">6</button>
+        <button v-on:click="() => onPressedOperation('*')">&times;</button>
       </div>
       <div class="button-row">
         <button v-on:click="() => onPressedDigit(1)">1</button>
-        <button v-on:click="() => onPressedDigit(1)">2</button>
-        <button v-on:click="() => onPressedDigit(1)">3</button>
-        <button>&minus;</button>
+        <button v-on:click="() => onPressedDigit(2)">2</button>
+        <button v-on:click="() => onPressedDigit(3)">3</button>
+        <button v-on:click="() => onPressedOperation('-')">&minus;</button>
       </div>
       <div class="button-row">
-        <button>&plusmn;</button>
-        <button>0</button>
-        <button>.</button>
+        <button v-on:click="() => onPressedOperation('+/-')">+/-</button>
+        <button v-on:click="() => onPressedDigit(0)">0</button>
+        <button v-on:click="() => onPressedOperation('.')">.</button>
         <button v-on:click="() => onPressedOperation('+')">&plus;</button>
       </div>
     </div>
