@@ -1,51 +1,59 @@
 @font-face {
-  font-family: 'LCD Normal';
-  font-style: normal;
-  font-weight: normal;
-  src: local('LCD Normal'), url('LCD-N___.woff') format('woff');
-}
+    font-family: 'LCD Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('LCD Normal'), url('LCD-N___.woff') format('woff');
+  }
+  
+  #app {
+    background-color: #817979;
+    width: 500px;
+    height: 550px;
+    margin: auto;
+  }
+  
+  .display, .secondary-display {
+    text-align: right;
+  }
+  
+  .display {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .secondary-display {
+    background-color: #1a4912;
+    color: #ffffff;
+    width: 500px;
+    height: 80px;
+    font-size: 40px;
+    font-family: 'LCD Normal';
+  }
+  
+  .button-row {
+    margin: 12px 22px;
+  }
+  
+  .button-row button {
+    width: 70px;
+    height: 70px;
+    margin: 0px 20px 0px 20px;
+    font-size: 32px;
+    font-family: Calibri;
+    border: 2px solid;
+    border-color: #000;
+  }
+  
+  .solar-panel {
+    height: 60px;
+    width: 30px;
+    margin: 0px;
+    background-color: #311212;
+    border-color: #000;
+    border: 5px solid;
+    display: inline-block;
+  }
 
-#app {
-  background-color: #817979;
-  width: 500px;
-  height: 505px;
-  margin: auto;
-}
-
-.display, .secondary-display {
-  text-align: right;
-}
-
-.display {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.secondary-display {
-  background-color: #1a4912;
-  color: #ffffff;
-  width: 500px;
-  height: 80px;
-  font-size: 40px;
-  font-family: 'LCD Normal';
-}
-
-.button-row {
-  margin: 12px 22px;
-}
-
-.button-row button {
-  width: 70px;
-  height: 70px;
-  margin: 0px 20px 0px 20px;
-  font-size: 32px;
-  font-family: Calibri;
-}
-
-.solar-panel {
-  height: 70px;
-  width: 15px;
-  margin: 0px;
-  background-color: #311212;
-  border-color: #000;
-}
+  .solar-panel:first-of-type {
+    margin: 0px 0px 0px 45px;
+  }
